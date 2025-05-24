@@ -48,7 +48,7 @@ const ProfileScreen = () => {
   useEffect(() => {
     const email = localStorage.getItem("userEmail");
     if (email) {
-      fetch("http://localhost:5000/api/profile?email=" + encodeURIComponent(email))
+      fetch("https://popx-2.onrender.com/api/profile?email=" + encodeURIComponent(email))
         .then(res => {
           if (!res.ok) throw new Error("Profile not found");
           return res.json();
